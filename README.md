@@ -42,3 +42,35 @@ mvn deploy:deploy-file \
     </server>
 
 ```
+
+## 签名算法示例
+```
+package demo;
+
+import com.nfangbian.javasupport.utils.ApiSign;
+import java.util.HashMap;
+import java.util.Map;
+
+public class CjsDemo {
+    public static void main(String[] arrg) {
+        ApiSign apiSign = ApiSign.getInstance();
+        apiSign.setSecret("abc123$%^cjs789xyz");
+        Map<String, Object> data = new HashMap<String, Object>();
+            data.put("a", 123);
+            data.put("b", false);
+            data.put("b1", true);
+            data.put("c", 0);
+            data.put("c1", "");
+            data.put("c2", null);
+            data.put("d", 222.2);
+            data.put("e2", 0.1);
+            data.put("e4", "你好，我是xxx");
+            data.put("e0", 888);
+        apiSign.setData(data);
+        String sign = apiSign.makeSign();
+        System.out.println(sign);
+
+    }
+}
+
+```
