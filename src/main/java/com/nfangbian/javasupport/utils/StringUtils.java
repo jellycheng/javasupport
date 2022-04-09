@@ -18,6 +18,10 @@ public class StringUtils {
 
     /**
      * 布尔值转换为0或1
+     *
+     * @param bool bool值
+     * @return String
+     *
      */
     public static String boolean2String(Boolean bool) {
         if (bool == null) {
