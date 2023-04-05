@@ -74,3 +74,34 @@ public class CjsDemo {
 }
 
 ```
+
+## 加解密算法
+```
+package demo;
+
+import com.nfangbian.javasupport.utils.Aes;
+
+public class CjsDemo {
+    public static void main(String[] arrg) {
+        String appKey = "helloWorld1234";
+        String str1 = "{\"chn\": \"baidu\",\"phone\": \"13712345678\",\"timestamp\": \"1680694802\",\"biz_type\": 1}";
+        String res1 = "";
+        // 加密
+        try {
+            res1 = Aes.encrypt(str1, appKey);
+            System.out.println(res1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            String str2 = res1;
+            String res2 = Aes.decrypt(str2, appKey);
+            System.out.println(res2);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+}
+
+```
