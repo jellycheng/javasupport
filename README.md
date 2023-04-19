@@ -75,10 +75,8 @@ public class CjsDemo {
 
 ```
 
-## 加解密算法
+## Aes加解密算法
 ```
-package demo;
-
 import com.nfangbian.javasupport.utils.Aes;
 
 public class CjsDemo {
@@ -101,6 +99,24 @@ public class CjsDemo {
             e.printStackTrace();
         }
 
+    }
+}
+
+```
+
+## Des加解密算法
+```
+import com.nfangbian.javasupport.utils.DESUtils;
+
+public class CjsDemo {
+    public static void main(String[] arrg) {
+        String desKey = "f8k3f5x6f8g2er68";
+        String desIV  = "12345678";
+        String str1 = "{\"code\":0,\"msg\":\"success\",\"data\":{\"tips\":\"无线Api正常\",\"cloud_name\":false},\"trace_id\":\"0187989ccf93525400e908c82bce0000\"}";
+        String res1 = DESUtils.encrypt(desIV, desKey, str1); //加密
+        System.out.println(res1);
+        String res2 = DESUtils.decrypt(desIV, desKey, res1); //解密
+        System.out.println(res2);
     }
 }
 
