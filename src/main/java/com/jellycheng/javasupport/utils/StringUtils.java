@@ -1,4 +1,4 @@
-package com.nfangbian.javasupport.utils;
+package com.jellycheng.javasupport.utils;
 
 public class StringUtils {
 

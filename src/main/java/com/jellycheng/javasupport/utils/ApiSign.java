@@ -1,4 +1,4 @@
-package com.nfangbian.javasupport.utils;
+package com.jellycheng.javasupport.utils;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -26,8 +26,14 @@ public class ApiSign {
         return data;
     }
 
-    public void setData(Map<String, Object> data) {
+    public ApiSign setData(Map<String, Object> data) {
         this.data = data;
+        return this;
+    }
+
+    public ApiSign append(String k, Object v) {
+        this.data.put(k, v);
+        return this;
     }
 
     public String makeSign() {

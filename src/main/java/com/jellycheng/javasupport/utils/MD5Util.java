@@ -1,4 +1,4 @@
-package com.nfangbian.javasupport.utils;
+package com.jellycheng.javasupport.utils;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;

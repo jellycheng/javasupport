@@ -1,4 +1,4 @@
-package com.nfangbian.javasupport.utils;
+package com.jellycheng.javasupport.utils;
 
 import java.util.Date;
 import java.util.UUID;

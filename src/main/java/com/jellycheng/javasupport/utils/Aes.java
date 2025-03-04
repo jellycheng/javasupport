@@ -1,4 +1,4 @@
-package com.nfangbian.javasupport.utils;
+package com.jellycheng.javasupport.utils;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
